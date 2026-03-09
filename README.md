@@ -25,17 +25,16 @@ Comparison of three self-supervised ViT backbones, CLIP, DINO, and MAE, on a 10-
 ├── representations.py       # Feature extractor, FeaturesDataset, t-SNE, training utilities
 │
 └── figures/
-    ├── tsne_clip.png                        # t-SNE plots for each backbone
-    ├── tsne_dino.png
-    ├── tsne_mae.png
-    ├── banana_lemon_dino.png                # Class overlap density plots (banana vs lemon)
-    ├── banana_lemon_mae.png
-    ├── linear_probe_loss_clip.png           # Training loss curves
-    ├── linear_probe_loss_dino.png
-    ├── linear_probe_loss_mae.png
-    ├── finetune_loss_clip.png
-    ├── finetune_loss_dino.png
-    └── finetune_loss_mae.png
+    ├── part1_features_t-sne_(clip).png                        # t-SNE plots for each backbone
+    ├── part1_features_t-sne_(dino).png
+    ├── part1_features_t-sne_(mae).png
+    ├── part1_mae_banana_lemon_overlap.png               # Class overlap density plots (banana vs lemon)
+    ├── clip_linearprobe.png           # Training loss curves
+    ├── dino_linearprobe.png
+    ├── mae_linerprobe.png
+    ├── finetune_clip.png
+    ├── finetune_dino.png
+    └── finetune_mae.png
 ```
 
 ---
