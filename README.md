@@ -12,7 +12,7 @@ Comparison of three self-supervised ViT backbones, CLIP, DINO, and MAE, on a 10-
 | DINO | 87.8% | 89.6% |
 | MAE | 68.6% | **86.4%** |
 
-> CLIP has the strongest frozen representations (best linear probe). DINO produces the most visually separated t-SNE clusters. MAE benefits most from fine-tuning (+17.8%) — its reconstruction-based features are poorly suited for classification until adapted.
+> CLIP has the strongest frozen representations (best linear probe). DINO produces the most visually separated t-SNE clusters. MAE benefits most from fine-tuning (+17.8%) as its reconstruction-based features are poorly suited for classification until adapted.
 
 ---
 
@@ -78,10 +78,14 @@ pip install torch timm scikit-learn matplotlib gdown tqdm
 python evaluate.py
 ```
 
-This will automatically download the dataset, extract features for all three backbones, produce t-SNE plots and density visualisations, train and evaluate linear probes, and run fine-tuning — saving all figures to `figures/`.
+This will automatically download the dataset, extract features for all three backbones, produce t-SNE plots and density visualisations, train and evaluate linear probes, and run fine-tuning, saving all figures to `figures/`.
 
 ---
 
 ## Report
 
 Full analysis with figures is in [`report.pdf`](./report.pdf).
+
+## Acknowledgements
+
+The feature extraction backbone and dataset pipeline were provided by the University of Cambridge Department of Engineering as part of a graduate advanced computer vision course. Original framework developed by Ayush Tewari and Elliot Wu. All experimental analysis, visualisations, and findings are my own work.
