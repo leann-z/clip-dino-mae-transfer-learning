@@ -60,9 +60,9 @@ All three use `ViT-B/16` as the base architecture, loaded via `timm`, but differ
 
 ### Key Findings
 
-- **CLIP** leads on linear probing despite having more t-SNE cluster overlap than DINO — t-SNE captures local neighbourhood structure, not global linear separability.
+- **CLIP** leads on linear probing despite having more t-SNE cluster overlap than DINO, as t-SNE captures local neighbourhood structure, not global linear separability.
 - **DINO** produces the cleanest cluster separation in t-SNE, particularly for visually distinct classes (jackfruit, pineapple). Its teacher-student objective learns structural features without semantic priors.
-- **MAE** confuses visually similar classes at the feature level — banana and lemon cluster together due to shared yellow pixel statistics. Fine-tuning corrects this by redirecting the objective from reconstruction to classification.
+- **MAE** confuses visually similar classes at the feature level (banana and lemon cluster together due to shared yellow pixel statistics). Fine-tuning corrects this by redirecting the objective from reconstruction to classification.
 - **Catastrophic forgetting**: CLIP's fine-tune accuracy drops slightly from its linear probe (90% vs 92.4%), consistent with the well-documented degradation of large pre-trained models on small downstream datasets.
 
 ---
